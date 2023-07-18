@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/btech.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+            <div class="container-fluid">
+                <a href="" class="navbar-brand">
+                    <img src="image/logo.png" alt="">
+                </a>
+                <!--mobile view-->
+                <button class="navbar-toggler" data-bs-target="#d" data-bs-toggle="collapse" >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!--menu start-->
+                <div class="navbar-collapse collapse" id="d">  
+                    <ul class="navbar-nav ms-auto text-center">
+                        <li><a href="" class="nav-link">LOGOUT</a></li>
+                    </ul>
+                </div>
+            </div><!--container-fluid end-->
+        </nav>
+    </header><!--header end-->
+
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="text-center col-md-12 form">
+                    <h1>B.Tech Registration Form</h1>
+                    <h1 class="text-danger">DO REGISTER</h1>
+                </div>
+            </div><!--row end-->
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="carousel slide mt-4" data-bs-ride="carousel" id="a">
+                        <div class="carousel-indicators">
+                          <button type="button"data-bs-target="#a"data-bs-slide-to="0"class="active"></button>
+                          <button type="button" data-bs-target="#a" data-bs-slide-to="1"></button>
+                          <button type="button" data-bs-target="#a" data-bs-slide-to="2"></button>
+                        </div><!--carousel-indicators-->
+                  
+                        <div class="carousel-inner">
+                            <div class="carousel-item active imageheight" data-bs-interval="3000">
+                              <img class="w-100" src="https://mits-admission-portal.onrender.com/assets/images/registration_form1.jpg" alt="">
+                            </div>
+                            <div class="carousel-item imageheight" data-bs-interval="2000">
+                                <img class="w-100 " src="https://mits-admission-portal.onrender.com/assets/images/registration_form2.jpg" alt="">
+                              </div>
+                              <div class="carousel-item imageheight" data-bs-interval="2000">
+                                <img class="w-100" src="https://mits-admission-portal.onrender.com/assets/images/registration_form3.jpg" alt="">
+                              </div>
+                        </div><!--carousel-inner end-->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#a" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#a" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                     </div><!--carousel slide end-->
+                </div>
+                <div class="col-md-6">
+                    <div class="fluid-container">
+                        <div class="row bg">
+                          <div class="col-md-12 ">
+                            <div class="container loginblock register">
+                              <form>
+                                <div class="mb-3 mt-4">
+                                  <label class="mb-2" style="opacity: 0.6">Username:</label>
+                                  <input type="text" name="" placeholder="Name" class="form-control h"required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="mb-2" style="opacity: 0.6">Email:</label>
+                                  <input type="email" name="" placeholder="Email" class="form-control h" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="mb-2" style="opacity: 0.6">Mobile No.</label>
+                                  <input type="number" name="" placeholder="Enter Mobile Number" class="form-control h" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="mb-2" style="opacity: 0.6">Date:</label>
+                                  <input type="date" name="" class="form-control h"required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="mb-2" style="opacity: 0.6">Gender:</label>
+                                    <br>
+                                 <input type="radio" name="" value="male">&nbsp; Male
+                                 &nbsp;
+                                 <input type="radio" name="" value="female">&nbsp; Female
+                                </div>
+                                <div class="mb-3">
+                                    <label class="mb-2" style="opacity: 0.6">Address:</label>
+                                  <textarea name="" class="form-control h"required>
+                                </textarea>
+                                </div>
+                                <p style="opacity: 0.6;">Profile Picture</p>
+                                <div class="mb-3">
+                                  <input type="file"name="image"class="form-control"style="margin-top: -15px"required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="mb-2" style="opacity: 0.6">Select College:</label>
+                                  <select name="" class="form-control h"required>
+                                    <option>Select</option>
+                                    <option>Mits</option>
+                                    <option>ITM</option>
+                                    <option>Rjit</option>
+                                    <option>NITM</option>
+                                </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="mb-2" style="opacity: 0.6">Course:</label>
+                                  <select name="" class="form-control h"required>
+                                    <option>Select</option>
+                                    <option>B.Tech</option>
+                                </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="mb-2" style="opacity: 0.6">Branch:</label>
+                                  <select name="" class="form-control h"required>
+                                    <option>Select</option>
+                                    <option>CSS</option>
+                                    <option>IT</option>
+                                    <option>EC</option>
+                                    <option>ET</option>
+                                    <option>ME</option>
+                                    <option>EE</option>
+                                </select>
+                                </div>
+                                
+                                <button class="form-control">Register</button>
+                                <h6>HAVE A ACCOUNT? <a href="login.html">LOGIN NOW</a></h6>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid mt-3 navbar">
+        <div class="container mt-5 mb-4">
+            <div class="row w-100">
+                <div class="col-md-5 footer mb-4">
+                    <img class="mb-3" src="image/logo.png" alt="">
+                    <p style="margin-bottom: 1rem;">6, Indrapuri Colony, Bhawarkua ,AB Road, Indore 451010</p>
+                    <p style="margin-bottom: 1rem;">customercare@bookcorner.in</p>
+                    <p style="margin-bottom: 1rem;">07426-222307</p>
+                    <h5 class="text-white"><b> FOLLOW US</b></h5>
+                    <div class="icon">
+                        <i class="fa-brands fa-linkedin"></i>
+                        <i class="fa-brands fa-square-facebook"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                </div><!--col end-->
+                <div class="col-md-3 footer mb-4">
+                    <div class="mb-4 p2">
+                    <h5 class="text-white mb-3"><b>COURSES</b></h5>
+                    <p>Under Graduate</p>
+                    <p>Post Graduate</p>
+                    <p>Ph.D.</p>
+                    </div>
+                    <div class="mb-3 p2">
+                        <h5 class="text-white mb-3"><b>IMPORTANT DATES</b></h5>
+                        <p>How to Apply</p>
+                        <p>Admission</p>
+                        <p>Cancellation Rules</p>
+                        <p>Fee Structure</p>
+                    </div>
+                </div><!--col-3 end-->
+                <div class="col-md-4 footer mb-4">
+                    <div class="mb-4 p2">
+                    <h5 class="text-white mb-3"><b>DOWNLOAD</b></h5>
+                    <p>Application Form</p>
+                    <p>Syllabus</p>
+                    <p>Time Table</p>
+                    <p>Notices</p>
+                    </div>
+                    <div class="mb-3 p2">
+                        <h5 class="text-white mb-3"><b>IMPORTANT LINKS</b></h5>
+                        <p>AICTE</p>
+                        <p>DAVV</p>
+                        <p>RGPV</p>
+                        <p>DTE</p>
+                    </div>
+                </div><!--col-3 end-->
+            </div><!--ROW END-->
+        </div>
+    </div><!--container-fluid end-->
+    <div class="container-fluid bg-black">
+        <div class="row text-center abc">
+          <div class="mb-3 mt-3">
+            <a href="">PRIVACY POLICY | TERMS AND CONDITIONS</a
+            >
+            <h6 style="color: white">
+              COPYRIGHT © 2023
+              <a href="">| ADMISSION PORTAL</a>
+            </h6>
+          </div>
+        </div>
+      </div><!--container fluid end-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous">
+    </script>
+
+</body>
+</html>

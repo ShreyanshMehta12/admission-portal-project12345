@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.bg{
+    background-image: url("/image/bg.jpeg");
+    overflow: hidden;
+    background-repeat: no-repeat;
+    width:102%;
+	height:625px;
+	background-position: center;
+	background-size: cover;
+    position: relative;
+}
+@media(max-width:670px){
+    .bg{
+        background-image: url("/image/bg4.jpeg");
+        width: 106%;
+    }
+    .loginblock{
+        left: 12%!important;
+        width: 75%!important;
+    }
+    
+}
+.loginblock{
+    background-color: #add3d5;
+    width: 33%;
+    position: absolute;
+    border-radius: 18px;
+    height: 400px;
+    left: 55%;
+}
+.head h1{
+    padding: 15px 0px 10px 0;
+}
+.head input{
+    height: 45px;
+}
+.loginblock button{
+    height: 40px;
+    font-size: 18px;
+    background-color:#276999e3;
+    color: white;
+    border: none;
+    margin-bottom: 10px;
+    margin-top: 25px;
+}
+.loginblock button:hover{
+    background-color: rgb(39 105 153);
+}
+.head h6{
+    font-size: 14px;
+    padding: 8px 0px 0 75px;
+}
+
+

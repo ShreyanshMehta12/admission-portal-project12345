@@ -1,0 +1,62 @@
+<%- include('./header.ejs') %>
+
+<!-- Contact info start -->
+<div class="container-fluid contact-info">
+  <div class="container">
+    <div class="row mt-5 mb-5 ">
+      <div class="col-md-6 px-5 py-3" style="padding-right: 5%;">
+        <h2 style="padding-bottom: 4%; font-weight: 300;">SEND US MESSAGE</h2>
+
+        <form onsubmit="return validation()">
+          <input type="text" name="user" id="user" placeholder="Name" class="form-control mt-3 mb-1" required>
+          <span id="username" class="text-danger"></span>
+          <input type="email" name="email" placeholder="Email" class="form-control mb-3 mt-3" required>
+          <input type="number" name="mobile" id="mobile" placeholder="Phone" class="form-control mb-1" required>
+          <span id="mobileno" class="text-danger"></span>
+          <textarea name="message" placeholder="Message" class="form-control mb-3 mt-3" required></textarea>
+          <button href="" type="submit" class="btn btn-info button mb-3">Submit</button>
+        </form>
+      </div>
+      <div class="col-md-6 px-5 py-3">
+        <h2 style="padding-bottom: 4%; font-weight: 300;">CONTACT INFO</h2>
+        <h3>Address</h3>
+        <p>6, Indrapuri Colony, Bhawarkua ,AB Road, Indore 451010</p>
+        <div class="map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14724.482249076204!2d75.8592541216367!3d22.686555409557347!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fcefd3fa0725%3A0x7c70f357d1388c17!2sIndrapuri%20Colony%2C%20Bhanwar%20Kuwa%2C%20Indore%2C%20Madhya%20Pradesh!5e0!3m2!1sen!2sin!4v1655543051827!5m2!1sen!2sin" width="400" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <h3 class="mt-3">Other Enquiry</h3>
+        <p>Phone: <span>01141187447</span><br>
+            Email: <span>customercare@bookcorner.in</span><br>
+            Open: Monday – Saturday 10:30 – 19:30</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Contact info end -->
+
+<script type="text/javascript">
+		function validation(){
+			let user = document.getElementById('user').value
+			let mobileNumber = document.getElementById('mobile').value
+
+			if((user.length <= 2) || (user.length > 20)) {
+				document.getElementById('username').innerHTML =" ** Username lenght must be between 2 and 20";
+				return false;	
+			}
+			if(!isNaN(user)){
+				document.getElementById('username').innerHTML =" ** only characters are allowed";
+				return false;
+			}
+			
+      if(isNaN(mobileNumber)){
+				document.getElementById('mobileno').innerHTML =" ** user must write digits only not characters";
+				return false;
+			}
+			if(mobileNumber.length!=10){
+				document.getElementById('mobileno').innerHTML =" ** Mobile Number must be 10 digits only";
+				return false;
+			}
+		}
+</script>
+
+<%- include('./footer.ejs') %>

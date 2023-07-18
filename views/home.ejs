@@ -1,0 +1,187 @@
+<%- include('./header.ejs')%>
+<img class="w-100" src="image/BITS-12.jpg" alt="">
+    <div class="container">
+        <h1 class="text-center mt-4 mb-4 heading">Available Courses</h1>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card shadow-lg mb-4">
+                   <img src="image/btech.jpg" alt="">
+                   <div class="card-body text-center">
+                    <h4>B-Tech</h4>
+                    <h6>B.Tech is a professional undergraduate engineering degree</h6>
+                    <% if(b) { %>
+                      <a href="/coursedisplay" class="btn reg mt-1">Display</a>
+                    <% }else{ %>
+                      <a href="#"  data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn reg mt-1">Register</a>
+                    <% } %>
+                  </div> 
+                </div><!--card end-->
+            </div><!--col end-->
+            <div class="col-md-4">
+                <div class="card shadow-lg mb-4">
+                    <img class="w-100" src="image/bca.jpg" alt="">
+                    <div class="card-body text-center">
+                    <h4>BCA</h4>
+                    <h6>BCA is a three-year Bachelor's Degree in Computer Application</h6>
+                    <% if(bc) { %>
+                      <a href="/coursedisplay" class="btn reg mt-1">Display</a>
+                    <% }else{ %>
+                      <a href="#"  data-bs-toggle="modal" data-bs-target="#BCAModal" class="btn reg mt-1">Register</a>
+                    <% } %>
+                    </div> 
+                 </div><!--card end-->
+            </div><!--col end-->
+            <div class="col-md-4">
+                <div class="card shadow-lg mb-4">
+                    <img src="image/bba.jpg" alt="">
+                    <div class="card-body text-center">
+                     <h4>BBA</h4>
+                     <h6>BBA is a Bachelor's Degree in Business Administration</h6>
+                     <% if(bb) { %>
+                      <a href="/coursedisplay" class="btn reg mt-1">Display</a>
+                    <% }else{ %>
+                      <a href="#"  data-bs-toggle="modal" data-bs-target="#BBAModal" class="btn reg mt-1">Register</a>
+                    <% } %>
+                    </div> 
+                 </div><!--card end-->
+            </div>
+        </div><!--row end-->
+    </div><!--container end-->
+
+    
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">B-Tech Form</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form action="/courseinsert" method="post">
+            <div class="mb-3">
+                <label>Name</label>
+                <input type="text" value="<%= n %>" name="name" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label>Email</label>
+                <input type="email" value="<%= e %>" name="email" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label>Phone No.</label>
+                <input type="number" name="phone" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label>10th Number</label>
+                <input type="number" name="tenth" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label>12th Number</label>
+                <input type="number" name="twelth" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label>Course</label>
+                <input type="text" name="course" value="B-Tech" class="form-control" readonly required>
+            </div>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="BCAModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">BCA Form</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="/courseinsert" method="post">
+          <div class="mb-3">
+              <label>Name</label>
+              <input type="text" value="<%= n %>" name="name" class="form-control">
+          </div>
+          <div class="mb-3">
+              <label>Email</label>
+              <input type="email" value="<%= e %>" name="email" class="form-control">
+          </div>
+          <div class="mb-3">
+              <label>Phone No.</label>
+              <input type="number" name="phone" class="form-control">
+          </div>
+          <div class="mb-3">
+              <label>10th Number</label>
+              <input type="number" name="tenth" class="form-control">
+          </div>
+          <div class="mb-3">
+              <label>12th Number</label>
+              <input type="number" name="twelth" class="form-control">
+          </div>
+          <div class="mb-3">
+              <label>Course</label>
+              <input type="text" name="course" value="BCA" class="form-control" readonly required>
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="BBAModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">BBA Form</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="/courseinsert" method="post">
+          <div class="mb-3">
+              <label>Name</label>
+              <input type="text" value="<%= n %>" name="name" class="form-control">
+          </div>
+          <div class="mb-3">
+              <label>Email</label>
+              <input type="email" value="<%= e %>" name="email" class="form-control">
+          </div>
+          <div class="mb-3">
+              <label>Phone No.</label>
+              <input type="number" name="phone" class="form-control">
+          </div>
+          <div class="mb-3">
+              <label>10th Number</label>
+              <input type="number" name="tenth" class="form-control">
+          </div>
+          <div class="mb-3">
+              <label>12th Number</label>
+              <input type="number" name="twelth" class="form-control">
+          </div>
+          <div class="mb-3">
+              <label>Course</label>
+              <input type="text" name="course" value="BBA" class="form-control" readonly required>
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <%- include('./footer.ejs')%>

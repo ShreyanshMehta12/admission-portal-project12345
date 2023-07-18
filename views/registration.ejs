@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/project1.css" />
+  </head>
+  <body>
+    <div class="fluid-container">
+      <div class="row bg">
+        <div class="col-md-12">
+          <div class="container loginblock register">
+            <form action="/userinsert" method="post" enctype="multipart/form-data">
+              <h1>Register Here</h1>
+              <hr>
+              <% if(message.length>0){ %>
+                <div class="alert alert-danger">
+                  <%= message %>
+                </div>
+              <% }%>
+              
+              <div class="mb-3 mt-4">
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Name"
+                  class="form-control h"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email"
+                  class="form-control h"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <input
+                  type="password"
+                  name="password"
+                  placeholder="Password"
+                  class="form-control h"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <input
+                  type="confirm password"
+                  name="confirm_password"
+                  placeholder="confirm password"
+                  class="form-control h"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <input type="checkbox" onclick="" />
+                <span>Show Password</span>
+              </div>
+              <p>Profile Picture</p>
+              <div class="mb-3">
+                <input
+                  type="file"
+                  name="image"
+                  class="form-control"
+                  style="margin-top: -15px"
+                  required/>
+              </div>
+              <button class="form-control">Register</button>
+              <h6>HAVE A ACCOUNT? <a href="/">LOGIN NOW</a></h6>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
