@@ -38,7 +38,7 @@ app.set('view engine','ejs')
 app.use('/',web)
 
 //static file
-app.use(express.static('public'))
+app.use(express.static('Public'))
 
 
 //server start
